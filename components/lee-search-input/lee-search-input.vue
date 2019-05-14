@@ -12,7 +12,7 @@
 				<input class="input" :style={paddingLeft:getPaddingLeft} :type="type" :password="password" :disabled="disabled"
 				 :maxlength="maxLength" :cursor-spacing="cursorSpacing" :focus="focus" :confirm-type="confirmType" :confirm-hold="confirmHold"
 				 :cursor="cursor" :selection-start="selectionStart" :selection-end="selectionEnd" :adjust-position="adjustPosition"
-				 v-model="keyWord" @focus="inputFocus" @blur="blur" />
+				 v-model="keyWord" @focus="inputFocus" @blur="blur" @input="input" @confirm="confirm" />
 				<view class="icon-btn-wrap">
 					<!-- #ifdef -->
 					<image class="icon" v-if="showVoiceIcon" @click="voice" mode="aspectFit" :src="iconSrc.voice" :style="{height:getIconHeight,width:getIconWidth,padding:getIconPadding,transform:'scale('+ iconAttr.scale + ')'}"></image>
@@ -23,7 +23,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="btn" v-if="getBtnEnable" :style="{color:getBtnColor,backgroundColor:getBtnBackgroundColor,borderRadius:getBtnBorderRadius,fontSize:getBtnFontSize,border:getBtnBorder,borderWidth:getBtnBorderWidth,lineHeight:getHeight,paddingLeft:getBtnPaddingLeft,paddingRight:getBtnPaddingRight,backgroundImage:getBtnBackgroundImage,backgroundPosition:getBtnBackgroundPosition,backgroundSize:getBtnbackgroundSize}"
+		<view class="btn" v-if="getBtnEnable" :style="{color:getBtnColor,backgroundColor:getBtnBackgroundColor,borderRadius:getBtnBorderRadius,fontSize:getBtnFontSize,border:getBtnBorder,borderWidth:getBtnBorderWidth,lineHeight:getHeight,paddingLeft:getBtnPaddingLeft,paddingRight:getBtnPaddingRight, backgroundImage:getBtnBackgroundImage, bacbackgroundPosition:getBtnBackgroundPosition,backgroundSize:getBtnbackgroundSize}"
 		 @click="btnClick">
 			{{getBtnText}}
 		</view>
@@ -83,7 +83,7 @@
 			btnAttr: {
 				type: Object,
 				default: {
-					enable: true,
+					enable: false,
 					text: '取消',
 					paddingLeft: 10,
 					paddingRight: 0,
@@ -93,7 +93,7 @@
 					color: '#333',
 					border: 'none',
 					borderWidth: 1,
-					backgroundImage: 'none',
+					backgroundImage: '',
 					backgroundPosition: 'center center',
 					backgroundSize: 'contain'
 				}
@@ -266,7 +266,7 @@
 				return this.btnAttr.enable || false
 			},
 			getBtnText() {
-				return this.btnAttr.text || '取消'
+				return this.btnAttr.text || ''
 			},
 			getBtnBackgroundColor() {
 				return this.btnAttr.backgroundColor || '#ffffff'
@@ -278,7 +278,7 @@
 				return this.btnAttr.border || 'none'
 			},
 			getBtnBackgroundImage() {
-				return this.btnAttr.backgroundImage || 'none'
+				return 'url(' + this.btnAttr.backgroundImage + ')'
 			},
 			getBtnBackgroundPosition() {
 				return this.btnAttr.backgroundPosition || 'center center'
@@ -332,23 +332,33 @@
 			watchToolIcon(icon) {
 				let flag = false
 				for (let key of Object.keys(this.iconSrc)) {
-					if (icon === key) {
+					if (icon === key && this.iconSrc) {
 						flag = true
 					}
 				}
 				return flag
 			},
-			clear() {
-				this.keyWord = ''
-			},
 			inputFocus() {
 				this.entering = true
+				this.$emit('focus')
 			},
 			blur() {
 				if (!this.keyWord && this.watchToolIcon('scan')) {
 					this.entering = false
 				}
+				this.$emit('blur')
 			},
+			input() {
+				this.$emit('input')
+			},
+			confirm() {
+				this.$emit('confirm')
+			},
+			clear() {
+				this.keyWord = ''
+				this.$emit('clear')
+			},
+			
 			scan() {
 				// 扫码
 				uni.scanCode({
@@ -485,6 +495,7 @@
 			min-width: 60upx;
 			width: inherit;
 			background-repeat: no-repeat;
+			background-image: '../../static/icon_search.png';
 		}
 
 

@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<uni-search-input :inputAttr="inputStyle" :voiceAttr="voiceAttr" :btnAttr="btnAttr" :iconSrc="iconSrc"   @scan="scan"></uni-search-input>
+		<uni-search-input :iconSrc="iconSrc"></uni-search-input>
 	</view>
 </template>
 
@@ -12,16 +12,11 @@
 		},
 		data() {
 			return {
-				inputStyle: {
-					placeholderText: 'ahhahfh'
-				},
-				voiceAttr:{},
-				btnAttr:{},
 				iconSrc: {
 					logo: '../../static/icon_search.png',
 					voice: '../../static/icon_voice.png',
 					scan: '../../static/icon_scan.png',
-					clear:'../../static/icon_clear.png',
+					clear:'../../static/icon_clear.png'
 				}
 			}
 		},
