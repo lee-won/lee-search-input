@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.search-input.data-v-471fadd6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.search-input.btn-link-input .input-wrap.data-v-471fadd6 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: 0 !important;
+}
+.search-input.btn-link-input .btn.data-v-471fadd6 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.search-input .icon.data-v-471fadd6 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: inherit;
+    padding: 10rpx;
+}
+.search-input .btn.data-v-471fadd6 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    min-width: 60rpx;
+    width: inherit;
+    background-repeat: no-repeat;
+}
+.search-input .input-wrap.data-v-471fadd6 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.search-input .input-wrap .placeholder-wrap.data-v-471fadd6 {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: inherit;
+      background: transparent;
+}
+.search-input .input-wrap .placeholder-wrap.center.data-v-471fadd6 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding-left: 0 !important;
+}
+.search-input .input-wrap .placeholder-wrap.left.data-v-471fadd6 {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+}
+.search-input .input-wrap .placeholder-wrap .text.data-v-471fadd6 {
+        color: inherit;
+}
+.search-input .input-wrap .basic.data-v-471fadd6 {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: inherit;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+}
+.search-input .input-wrap .basic .icon-btn-wrap.data-v-471fadd6 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        height: inherit;
+        font-size: 28rpx;
+        color: #333;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+}
+.search-input .input-wrap .basic .input.data-v-471fadd6 {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        height: 100%;
+        text-align: left;
+        color: inherit;
+        border: none;
+        outline: none;
+}
+.recond-btn.data-v-471fadd6 {
+  position: fixed;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 80%;
+  bottom: 20rpx;
+  color: #fff;
+  font-size: 32rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 40rpx;
+}
+@-webkit-keyframes animate-data-v-471fadd6 {
+0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+}
+20% {
+    -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+}
+50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+80% {
+    -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+}
+100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+}
+}
+@keyframes animate-data-v-471fadd6 {
+0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+}
+20% {
+    -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+}
+50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+80% {
+    -webkit-transform: scale(1, 0.5);
+            transform: scale(1, 0.5);
+}
+100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+}
+}
+.listen-wrap.data-v-471fadd6 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300rpx;
+  height: 100rpx;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  border-radius: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99999;
+}
+.listen-wrap .text.data-v-471fadd6 {
+    font-size: 28rpx;
+    margin-right: 10rpx;
+}
+.listen-wrap .animate.data-v-471fadd6 {
+    height: 28rpx;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.listen-wrap .animate .one.data-v-471fadd6 {
+      animation: animate-data-v-471fadd6 0.6s infinite 0.1s;
+      -webkit-animation: animate-data-v-471fadd6 0.6s infinite 0.1s;
+}
+.listen-wrap .animate .two.data-v-471fadd6 {
+      animation: animate-data-v-471fadd6 0.6s infinite 0.2s;
+      -webkit-animation: animate-data-v-471fadd6 0.6s infinite 0.2s;
+}
+.listen-wrap .animate .three.data-v-471fadd6 {
+      animation: animate-data-v-471fadd6 0.6s infinite 0.3s;
+      -webkit-animation: animate-data-v-471fadd6 0.6s infinite 0.3s;
+}
+.listen-wrap .animate .four.data-v-471fadd6 {
+      animation: animate-data-v-471fadd6 0.6s infinite 0.4s;
+      -webkit-animation: animate-data-v-471fadd6 0.6s infinite 0.4s;
+}
+.listen-wrap .animate .five.data-v-471fadd6 {
+      animation: animate-data-v-471fadd6 0.6s infinite 0.5s;
+      -webkit-animation: animate-data-v-471fadd6 0.6s infinite 0.5s;
+}
+.listen-wrap .animate .one.data-v-471fadd6,
+    .listen-wrap .animate .two.data-v-471fadd6,
+    .listen-wrap .animate .three.data-v-471fadd6,
+    .listen-wrap .animate .four.data-v-471fadd6,
+    .listen-wrap .animate .five.data-v-471fadd6 {
+      width: 4rpx;
+      height: 100%;
+      margin-left: 6rpx;
+      border-radius: 50rpx;
+      display: inline-block;
+}
+

@@ -1,0 +1,1 @@
+<view class="content" bind:__l="__l"><uni-search-input inputAttr="{{inputStyle}}" voiceAttr="{{voiceAttr}}" btnAttr="{{btnAttr}}" iconSrc="{{iconSrc}}" data-event-opts="{{[['^scan',[['scan']]]]}}" bind:scan="__e"></uni-search-input></view>

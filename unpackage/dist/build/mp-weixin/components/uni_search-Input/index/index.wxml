@@ -1,0 +1,1 @@
+<view class="search-input" bind:__l="__l"><input class="input"/></view>
