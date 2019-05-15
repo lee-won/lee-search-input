@@ -9,22 +9,6 @@
 
 
 
-样例展示：
-
-![1557835691914](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557835691914.png)
-
-![1557835802443](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557835802443.png)
-
-![1557837372201](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557837372201.png)
-
-![1557838157287](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557838157287.png)
-
-
-
-用法事：
-
-
-
 搜索框自定义属性说明： 
 
 | 属性名       | 类型    | 默认值 | 说明                                              |
@@ -127,15 +111,30 @@ iconSrc属性说明：(属性有值时开启对应图标)
 
 1.在manifest.json文件中添加语音插件
 
-​		![](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557834411296.png)
+​	
 
-2.在小程序管理平台添加插件
+```
+	"mp-weixin": {
+		/* 小程序特有相关 */
+		"appid": "此处为自己申请的",
+		"setting": {
+			"urlCheck": false
+		},
+		"plugins": {
+			"WechatSI": {
+				"version": "0.0.6",
+				"provider": "wx069ba97219f66d99"
+			}
+		},
+		"usingComponents": true
+	}
+```
 
-![1557834603691](C:\Users\leewon\AppData\Roaming\Typora\typora-user-images\1557834603691.png)
+ 
 
+2.在小程序管理平台  设置 》第三方设置 》添加插件 添加 “微信同声传译” 插件
 
-
-语音插件文档链接：
+插件文档链接：
 
 [https://mp.weixin.qq.com/wxopen/plugindevdoc?appid=wx069ba97219f66d99&amp;token=2051927552&amp;lang=zh_CN#-]: 
 

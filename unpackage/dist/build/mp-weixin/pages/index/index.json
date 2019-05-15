@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "uni-search-input": "/components/uni_search-Input/index/index"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "uni-search-input": "/components/lee-search-input/lee-search-input"
-  }
-}

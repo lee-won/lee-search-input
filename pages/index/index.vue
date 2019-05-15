@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import uniSearchInput from '../../components/lee-search-input/lee-search-input.vue'
+	import uniSearchInput from '../../components/lee-search/lee-search.vue'
 	export default { 
 		components:{
 			uniSearchInput
@@ -13,10 +13,10 @@
 		data() {
 			return {
 				iconSrc: {
-					logo: '../../static/icon_search.png',
-					voice: '../../static/icon_voice.png',
-					scan: '../../static/icon_scan.png',
-					clear:'../../static/icon_clear.png'
+					logo: '../../static/lee-search/icon_search.png',
+					voice: '../../static/lee-search/icon_voice.png',
+					scan: '../../static/lee-search/icon_scan.png',
+					clear:'../../static/lee-search/icon_clear.png'
 				}
 			}
 		},
