@@ -1,14 +1,20 @@
 <template>
 	<view class="content">
-		<uni-search-input :iconSrc="iconSrc"></uni-search-input>
+		<lee-search :iconSrc="iconSrc">
+			<!-- <template v-slot:icon>
+				<view class="icon-wrap">
+					<image class="icon"  mode="aspectFit"  src="../../static/lee-search/icon_clear.png"></image>
+				</view>
+			</template> -->
+		</lee-search>
 	</view>
 </template>
 
 <script>
-	import uniSearchInput from '../../components/lee-search/lee-search.vue'
+	import leeSearch from '../../components/lee-search/lee-search.vue'
 	export default { 
 		components:{
-			uniSearchInput
+			leeSearch
 		},
 		data() {
 			return {
@@ -31,21 +37,23 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		text-align: center;
 		height: 400upx;
+		.icon-wrap{
+			position:relative;
+			height:60upx;
+			top:0;
+			box-sizing: border-box;
+			.icon{
+				width:60upx;
+				height:60upx;
+				padding:10upx;
+				box-sizing: border-box;
+			}
+		}
 	}
 
-	.logo {
-		height: 200upx;
-		width: 200upx;
-		margin-top: 200upx;
-		transform: scale(0.1);
-	}
-
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
-	}
+	
 </style>

@@ -5,7 +5,7 @@
 			 v-if="!keyWord && getPlaceholderText">
 				<image v-if="showPlaceholderIcon" class="icon" mode="aspectFit" :style="{height:getIconHeight,width:getIconWidth,padding:getIconPadding,transform:'scale('+ iconAttr.scale + ')'}"
 				 :src="iconSrc.placeholder"></image>
-				<text class="text">{{inputAttr.placeholderText}}</text>
+				<text class="text">{{getPlaceholderText}}</text>
 			</view>
 			<view class="basic" :style="{height:getHeight,borderRadius:getBorderRadius,color:getColor}">
 				<image v-if="showLogoIcon" class="icon icon-logo" mode="aspectFit" :src="iconSrc.logo" :style="{height:getIconHeight,width:getIconWidth,padding:getIconPadding,transform:'scale('+ iconAttr.scale + ')'}"></image>
@@ -20,6 +20,7 @@
 					<!-- #endif -->
 					<image class="icon" v-if="showClearIcon" @click="clear" mode="aspectFit" :src="iconSrc.clear" :style="{height:getIconHeight,width:getIconWidth,padding:getIconPadding,transform:'scale('+ iconAttr.scale + ')'}"></image>
 					<image class="icon" v-if="showSearchIcon" @click="search" mode="aspectFit" :src="iconSrc.search" :style="{height:getIconHeight,width:getIconWidth,padding:getIconPadding,transform:'scale('+ iconAttr.scale + ')'}"></image>
+					<slot name="icon"></slot>
 				</view>
 			</view>
 		</view>
@@ -70,7 +71,7 @@
 					height: 60,
 					borderRadius: 30,
 					border: '1px solid #c8c7cc',
-					borderWidth: 1,
+					borderWidth: 1, 
 					backgroundColor: '#ffffff',
 					fontSize: 28,
 					color: '#333',
@@ -157,7 +158,7 @@
 			},
 			confirmType: {
 				type: String,
-				default: 'done'
+				default: '搜索'
 			},
 			confirmHold: {
 				type: Boolean,
@@ -188,7 +189,7 @@
 		},
 		computed: {
 			showPlaceholderIcon() {
-				return this.inputAttr.placeholderText && this.watchToolIcon('placeholder')
+				return this.getPlaceholderText && this.watchToolIcon('placeholder')
 			},
 			showLogoIcon() {
 				return this.watchToolIcon('logo')
@@ -233,7 +234,7 @@
 				return this.inputAttr.placeholderColor || '#808080'
 			},
 			getPlaceholderText() {
-				return this.inputAttr.placeholderText
+				return this.inputAttr.placeholderText || ' '
 			},
 			getPlaceholderPaddingLeft() {
 				if (this.showLogoIcon && this.getPlaceholderPosition === 'left') {

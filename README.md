@@ -87,6 +87,41 @@ iconSrc属性说明：(属性有值时开启对应图标)
 | placeholder | String | 无     | 输入框提示图标相对地址或远程地址 |
 | search      | String | 无     | 搜索图标相对地址或远程地址       |
 
+组件中在输入框左右边还新增了一个slot图标插槽，用户可以自定义自己的功能图标去拓展搜索框的功能，示例代码如下：
+
+```
+<lee-search :iconSrc="iconSrc">
+	<template v-slot:icon>
+		<view class="icon-wrap">
+			<image class="icon"  mode="aspectFit"  src="../../static/lee-search/icon_clear.png"></image>
+		</view>
+	</template>
+</lee-search>
+```
+
+注：使用slot插槽引入图标时，图标与组件内置图标存在没有垂直对齐方向上的情况，需要外层套一层标签使用css修复这个问题，代码如下：
+
+```
+.icon-wrap{
+			position:relative;
+			height:60upx; // 搜索框高度
+			top:0;
+			box-sizing: border-box;
+			.icon{
+				width:60upx;
+				height:60upx;
+				padding:10upx;
+				box-sizing: border-box；
+			}
+		}
+```
+
+
+
+
+
+
+
 其它属性为uni-app中 input组件原生属性，参考链接 
 
 [https://uniapp.dcloud.io/component/input]: 
@@ -116,7 +151,7 @@ iconSrc属性说明：(属性有值时开启对应图标)
 ```
 	"mp-weixin": {
 		/* 小程序特有相关 */
-		"appid": "此处为自己申请的",
+		"appid": "此处为自己申请的appid",
 		"setting": {
 			"urlCheck": false
 		},
